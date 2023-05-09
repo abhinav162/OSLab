@@ -6,7 +6,7 @@
 int main()
 {
     int re;
-    re = open("namedpipe1", O_WRONLY);
+    re = open("namedpipe1",O_NONBLOCK, O_WRONLY);
     write(re,"Hello msg",sizeof("Hello msg"));
     printf("Data sent to named pipe from sender having PID : %d\n",getpid());    
 }
